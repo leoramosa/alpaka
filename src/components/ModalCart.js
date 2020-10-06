@@ -7,6 +7,9 @@ import { AppContext } from '../context/AppContext';
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Dogsad from '../images/dogsad.png';
+
+import { CartContext } from '../context/CartContext';
+
 const useStyles = makeStyles({
   list: {
     width: 400,
@@ -62,6 +65,7 @@ const useStyles = makeStyles({
 });
 
 function ModalCart(props) {
+  const { increase, decrease, removeProduct } = useContext(CartContext);
   let { cart, setCart, usuario } = useContext(AppContext);
   let [total, setTotal] = useState(0);
   useEffect(() => {
@@ -95,7 +99,11 @@ function ModalCart(props) {
                   return (
                     <div className="cart__product" key={item.id}>
                       <div className="cart__quanty">
-                        <Button className={classes.button} title="Agregar uno">
+                        <Button
+                          onClick={() => increase(item.id)}
+                          className={classes.button}
+                          title="Agregar uno"
+                        >
                           <i className="fas fa-angle-up"></i>
                         </Button>
                         {item.cantidad}
