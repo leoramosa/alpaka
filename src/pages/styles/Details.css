@@ -20,6 +20,7 @@
   object-fit: cover;
   cursor: pointer;
   border: 2px solid black;
+  width: 568px;
 }
 
 .thumbnail {

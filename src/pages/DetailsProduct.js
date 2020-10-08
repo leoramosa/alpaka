@@ -62,7 +62,7 @@ function DetailsProduct(props) {
   let [thumbs, setThumbs] = useState([]);
   let [fotoActual, setFotoActual] = useState('');
 
-  let ruta = 'https://apirestshoop.herokuapp.com/servicios/productos/';
+  let ruta = 'https://alpaka-peru.herokuapp.com/servicios/productos/';
   const val_id = props.match.params.id;
   useEffect(() => {
     axios.get(ruta + val_id + '/').then((res) => {

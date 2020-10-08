@@ -36,3 +36,9 @@
 .column-footer-content {
   padding-left: 45px;
 }
+
+@media only screen and (max-width: 500px) {
+  .column-footer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

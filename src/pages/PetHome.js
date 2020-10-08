@@ -13,8 +13,7 @@ import SwiperCore, {
 } from 'swiper';
 
 import Gallery from '../components/Gallery';
-import Modal from '../components/Modal';
-import { Link } from 'react-router-dom';
+/* import { Link } from 'react-router-dom'; */
 import TitleDestacado from '../images/title-destacado.png';
 import './styles/PetHome.css';
 import Container from '@material-ui/core/Container';
@@ -31,7 +30,7 @@ function PetHome() {
 
   const obtenerDatos = async () => {
     const data = await fetch(
-      'https://apirestshoop.herokuapp.com/servicios/productos/'
+      'https://alpaka-peru.herokuapp.com/servicios/productos/'
     );
     const productospet = await data.json();
     setpetproduct(productospet);
@@ -56,15 +55,15 @@ function PetHome() {
               <SwiperSlide key={(prod.id, i)}>
                 <div className="">
                   <div className="title-banner">
-                    <p className="title-big-banner">{prod.nombre}</p>
+                    {/* <p className="title-big-banner">{prod.nombre}</p>
                     <p className="banner-description">
                       {prod.brevedescripcion}
-                    </p>
-                    <div className="">
+                    </p> */}
+                    {/* <div className="">
                       <Link to={`/productos/${prod.id}`}>
                         <div className="btn-adqui">COMPRAR AHORA</div>
                       </Link>
-                    </div>
+                    </div> */}
                   </div>
                   <img className="cover-pet" src={prod.fotoportada} alt="" />
                 </div>
@@ -75,9 +74,7 @@ function PetHome() {
         <div className="">
           <img className="img-destacado" src={TitleDestacado} alt="imagen" />
         </div>
-        <div className="">
-          <Modal />
-        </div>
+
         <div className="Gallery_container">
           <Gallery />
         </div>

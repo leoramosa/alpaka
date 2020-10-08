@@ -24,7 +24,7 @@ function HomeCategorias(props) {
   const classes = useStyles();
 
   const [lista, setLista] = useState([]);
-  const [categoria, setCategoria] = useState('');
+  const [categoria, setCategoria] = useState([]);
   useEffect(() => {
     let val_cat_id = props.match.params.id;
     axios

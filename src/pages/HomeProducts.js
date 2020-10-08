@@ -27,7 +27,7 @@ function HomeProducts() {
   const [homeprod, setLista] = useState([]);
   useEffect(() => {
     axios
-      .get('https://apirestshoop.herokuapp.com/servicios/productos/')
+      .get('https://alpaka-peru.herokuapp.com/servicios/productos/')
       .then((res) => {
         setLista(res.data);
       });

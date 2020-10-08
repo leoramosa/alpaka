@@ -131,9 +131,9 @@ function Product(props) {
                       </Button>
                     </Link>
                     <Button
-                      style={{ background: '#673ab7d4' }}
+                      style={{ background: '#eeb800' }}
                       variant="contained"
-                      color="primary"
+                      color="black"
                     >
                       Comprar
                     </Button>
