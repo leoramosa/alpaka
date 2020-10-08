@@ -6,7 +6,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AppContext } from '../context/AppContext';
 import { Link } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
-import Dogsad from '../images/dogsad.png';
 
 const useStyles = makeStyles({
   list: {
@@ -166,9 +165,9 @@ function ModalCart(props) {
             <div className="container-cartmodal">
               <div className="content-product-close">
                 <div className="content__dog">
-                  <div className="dog-close">
+                  {/* <div className="dog-close">
                     <img className="dogsad" src={Dogsad} alt="" />
-                  </div>
+                  </div> */}
                   <p className="cart-vacio">Tu carrito está vacío</p>
                 </div>
               </div>

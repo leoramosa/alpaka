@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Product from '../components/Product';
 import './styles/HomeProduct.css';
-import Modal from '../components/Modal';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -43,9 +42,6 @@ function HomeProducts() {
                 <div className="">Categorias</div>
                 <div className="">
                   <Category />
-                  <div className="">
-                    <Modal />
-                  </div>
                 </div>
               </Paper>
             </Grid>

@@ -25,7 +25,7 @@ function Footer() {
             </div>
             <div className="column-footer-content">
               <div className="box">
-                <h3>Acerca del Petshop</h3>
+                <h3>Acerca del Alpaka</h3>
                 <ul>
                   <li>
                     <Link to="">Sobre nosotros</Link>

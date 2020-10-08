@@ -241,7 +241,7 @@ function DetailsProduct(props) {
                 </div>
                 <div className="puntos__internet">
                   <div>Acumulas</div>
-                  <div>{detalle.preciointernet} PetPuntos</div>
+                  <div>{detalle.preciointernet} Alpaka puntos</div>
                 </div>
               </div>
               <div className="colors__product">
