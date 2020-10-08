@@ -19,18 +19,25 @@ import { Link } from 'react-router-dom';
 import TitleDestacado from '../images/title-destacado.png';
 import './styles/PetHome.css';
 import Container from '@material-ui/core/Container';
+import api from '../services/api';
+
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 SwiperCore.use([Autoplay]);
 
 function PetHome() {
-  const [petproduct, setLista] = useState([]);
+  const [petproduct, setpetproduct] = useState([]);
+
   useEffect(() => {
-    axios
-      .get('https://apirestshoop.herokuapp.com/servicios/productos/')
-      .then((res) => {
-        setLista(res.data);
-      });
+    obtenerDatos();
   }, []);
+
+  const obtenerDatos = async () => {
+    const data = await fetch(
+      'https://apirestshoop.herokuapp.com/servicios/productos/'
+    );
+    const productospet = await data.json();
+    setpetproduct(productospet);
+  };
 
   return (
     <React.Fragment>

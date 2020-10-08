@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
   },
   badges: {
     '& .MuiBadge-badge': {
-      background: '#17d2c9',
+      background: 'white',
       color: 'black',
     },
   },
