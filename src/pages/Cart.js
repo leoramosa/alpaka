@@ -37,12 +37,14 @@ function Cart() {
 
   useEffect(() => {
     calcularTotal();
+    function calcularTotal() {
+      let suma = cart.reduce(
+        (sum, item) => sum + item.precio * item.cantidad,
+        0
+      );
+      setTotal(suma.toFixed(2));
+    }
   }, [cart]);
-
-  function calcularTotal() {
-    let suma = cart.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
-    setTotal(suma.toFixed(2));
-  }
 
   function quitarProducto(idprod) {
     // idprod= 10 <= el id que quiero quitar de la lista

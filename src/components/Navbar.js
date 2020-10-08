@@ -30,7 +30,7 @@ function Navbar() {
       let nCart = localStorage.getItem('cart');
       setCart(JSON.parse(nCart));
     }
-  }, []);
+  }, [setCart]);
 
   const [clicked, setClicked] = useState(false);
 

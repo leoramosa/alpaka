@@ -66,13 +66,15 @@ function ModalCart(props) {
   let { cart, setCart } = useContext(AppContext);
   let [total, setTotal] = useState(0);
 
-  const calcularTotal = async () => {
-    let suma = cart.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
-    setTotal(suma.toFixed(2));
-  };
-
   useEffect(() => {
     calcularTotal();
+    function calcularTotal() {
+      let suma = cart.reduce(
+        (sum, item) => sum + item.precio * item.cantidad,
+        0
+      );
+      setTotal(suma.toFixed(2));
+    }
   }, [cart]);
 
   function quitarProducto(idprod) {

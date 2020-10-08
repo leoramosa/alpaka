@@ -108,7 +108,7 @@ function DetailsProduct(props) {
       });
       setImagenes(tmp);
     });
-  }, []);
+  }, [ruta, val_id]);
 
   function cambiarFoto(ruta) {
     setFotoActual(ruta);
@@ -204,6 +204,7 @@ function DetailsProduct(props) {
                             onClick={cambiarFoto.bind(this, item)}
                             src={item}
                             height="80"
+                            alt="imagen"
                           />
                         );
                       })}
