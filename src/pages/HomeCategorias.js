@@ -44,7 +44,7 @@ function HomeCategorias(props) {
             setCategoria(res.data.nombrecategoria);
           });
       });
-  }, {});
+  }, [props.match.params.id, categoria]);
   return (
     <div className={classes.root}>
       <div className="container homecontent ">
