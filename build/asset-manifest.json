@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.95a0ca16.chunk.css",
+    "main.js": "/static/js/main.aa0b2098.chunk.js",
+    "main.js.map": "/static/js/main.aa0b2098.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.81f01d93.js",
+    "runtime-main.js.map": "/static/js/runtime-main.81f01d93.js.map",
+    "static/css/2.b2f43565.chunk.css": "/static/css/2.b2f43565.chunk.css",
+    "static/js/2.ab7179de.chunk.js": "/static/js/2.ab7179de.chunk.js",
+    "static/js/2.ab7179de.chunk.js.map": "/static/js/2.ab7179de.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.e9ed73c488a7e5487f1c8434ef6a735b.js": "/precache-manifest.e9ed73c488a7e5487f1c8434ef6a735b.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.b2f43565.chunk.css.map": "/static/css/2.b2f43565.chunk.css.map",
+    "static/css/main.95a0ca16.chunk.css.map": "/static/css/main.95a0ca16.chunk.css.map",
+    "static/js/2.ab7179de.chunk.js.LICENSE.txt": "/static/js/2.ab7179de.chunk.js.LICENSE.txt",
+    "static/media/dogsad.png": "/static/media/dogsad.cacc11bf.png",
+    "static/media/all.min.css": "/static/media/fa-solid-900.ee09ad75.woff",
+    "static/media/tallas.jpg": "/static/media/tallas.5696ab23.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81f01d93.js",
+    "static/css/2.b2f43565.chunk.css",
+    "static/js/2.ab7179de.chunk.js",
+    "static/css/main.95a0ca16.chunk.css",
+    "static/js/main.aa0b2098.chunk.js"
+  ]
+}
