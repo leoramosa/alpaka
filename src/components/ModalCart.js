@@ -8,8 +8,6 @@ import { Link } from 'react-router-dom';
 import DeleteIcon from '@material-ui/icons/Delete';
 import Dogsad from '../images/dogsad.png';
 
-import { CartContext } from '../context/CartContext';
-
 const useStyles = makeStyles({
   list: {
     width: 400,
@@ -65,15 +63,18 @@ const useStyles = makeStyles({
 });
 
 function ModalCart(props) {
-  let { cart, setCart, usuario } = useContext(AppContext);
+  let { cart, setCart } = useContext(AppContext);
   let [total, setTotal] = useState(0);
+
+  const calcularTotal = async () => {
+    let suma = cart.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
+    setTotal(suma.toFixed(2));
+  };
+
   useEffect(() => {
     calcularTotal();
   }, [cart]);
-  function calcularTotal() {
-    let suma = cart.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
-    setTotal(suma.toFixed(2));
-  }
+
   function quitarProducto(idprod) {
     // idprod= 10 <= el id que quiero quitar de la lista
     // carrito [3,6,9,10,45,23]

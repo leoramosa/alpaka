@@ -46,9 +46,7 @@ function ModalAddProduct(props) {
             </Link>
 
             <p className="continure_sale">
-              <a onClick={props.CloseModal} href="#">
-                seguir comprando
-              </a>
+              <span onClick={props.CloseModal}>seguir comprando</span>
             </p>
           </div>
         </div>

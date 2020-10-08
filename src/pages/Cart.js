@@ -32,15 +32,18 @@ const useStyles = makeStyles((theme) => ({
 }));
 function Cart() {
   const classes = useStyles();
-  let { cart, setCart, usuario } = useContext(AppContext);
+  let { cart, setCart } = useContext(AppContext);
   let [total, setTotal] = useState(0);
+
   useEffect(() => {
     calcularTotal();
   }, [cart]);
+
   function calcularTotal() {
     let suma = cart.reduce((sum, item) => sum + item.precio * item.cantidad, 0);
     setTotal(suma.toFixed(2));
   }
+
   function quitarProducto(idprod) {
     // idprod= 10 <= el id que quiero quitar de la lista
     // carrito [3,6,9,10,45,23]
@@ -96,6 +99,15 @@ function Cart() {
               </div>
             );
           })}
+        </Grid>
+        <Grid>
+          <div>
+            <div className="cart__total">
+              <p>Subtotal</p>
+              <p>S/ {total}</p>
+            </div>
+          </div>
+          ;
         </Grid>
       </Grid>
     </div>
