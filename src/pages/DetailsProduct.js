@@ -4,7 +4,7 @@ import InputNumber from '../components/InputNumber';
 import './styles/Details.css';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
-import Modal from '../components/Modal';
+
 import { AppContext } from '../context/AppContext';
 import ModalAddProduct from '../components/ModalAddProduct';
 import MenuItem from '@material-ui/core/MenuItem';
@@ -225,9 +225,7 @@ function DetailsProduct(props) {
             <Grid item xs={5}>
               <div className="modal-detail">
                 <p className="title_product">{detalle.nombre}</p>
-                <div className="">
-                  <Modal />
-                </div>
+               
               </div>
               <p className="description_product">{detalle.descripcion}</p>
               <div className="title_price">
